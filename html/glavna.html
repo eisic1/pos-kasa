@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS - kasa</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/glavna.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <div class="header-1">
+
+        <img class="logo" src="../images/logo.png" alt="">
+
+        <form action="" class="search-box-container">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">Početna</a>
+            <a href="#category">Kategorija</a>
+            <a href="#product">Proizvodi</a>
+            <a href="#deal">Dogovor</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+
+        <div class="icons">
+            <button class="fas fa-shopping-cart fa-3x" data-toggle="modal" data-target="#cart" ></button>
+            <a href="http://34.65.74.184:8080/job/POS-kasa-Pipeline/lastSuccessfulBuild/artifact/POS_kasa-1.0-SNAPSHOT-jar-with-dependencies.jar" class="fas fa-download"></a>
+            <a href="#" class="fas fa-user-circle"></a>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="../images/home-img.png" alt="">
+    </div>
+
+    <div class="content">
+        <span>Svježe i organsko</span>
+        <h3>Vaši svakodnevni proizvodi</h3>
+        <button class="btn">Započnite</button>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- banner section starts  -->
+
+<section class="banner-container">
+
+    <div class="banner">
+        <img src="../images/banner-1.jpg" alt="">
+        <div class="content">
+            <h3>Specijalna ponuda</h3>
+            <p>Do 45% popusta</p>
+            <button onclick="prikaziSpecijalnu()" class="btn">Provjeri</button>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="../images/banner-2.jpg" alt="">
+        <div class="content">
+            <h3>Ograničena ponuda</h3>
+            <p>Do 50% popusta</p>
+            <button onclick="prikaziOgranicenu()" class="btn">Provjeri</button>
+        </div>
+    </div>
+
+    
+
+</section>
+
+<!-- banner section ends -->
+
+<section class="product" id="specijalna">
+        <h1 class="heading">specijalna ponuda</h1>
+        <div class="box-container">
+
+            <div class="box">
+                <span class="discount">-33%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="../images/product-1.png" alt="">
+                <h3>Banana</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price"> $10.50 <span> $13.20 </span> </div>
+                <div class="quantity">
+                    <span>Količina : </span>
+                    <input type="number" min="1" max="1000" value="1">
+                    <span> /kg </span>
+                </div>
+                <button class="btn buynow-btn" data-name="Banana" data-price="2">Dodaj u korpu</button>
+            </div>
+    
+            <div class="box">
+                <span class="discount">-45%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="../images/product-2.png" alt="">
+                <h3>Paradajz</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price"> $10.50 <span> $13.20 </span> </div>
+                <div class="quantity">
+                    <span>Količina : </span>
+                    <input type="number" min="1" max="1000" value="1">
+                    <span> /kg </span>
+                </div>
+                <button class="btn buynow-btn" data-name="Paradajz" data-price="2">Dodaj u korpu</button>
+            </div>
+    
+            <div class="box">
+                <span class="discount">-52%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="../images/product-3.png" alt="">
+                <h3>Narandža</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price"> $10.50 <span> $13.20 </span> </div>
+                <div class="quantity">
+                    <span>Količina : </span>
+                    <input type="number" min="1" max="1000" value="1">
+                    <span> /kg </span>
+                </div>
+                <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+            </div>
+
+            <div class="box">
+                <span class="discount">-52%</span>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <img src="../images/product-3.png" alt="">
+                <h3>Narandža</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price"> $10.50 <span> $13.20 </span> </div>
+                <div class="quantity">
+                    <span>Količina : </span>
+                    <input type="number" min="1" max="1000" value="1">
+                    <span> /kg </span>
+                </div>
+                <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+            </div> 
+        </div>
+    
+</section>
+
+<section class="product" id="ogranicena">
+        <h1 class="heading">ograničena ponuda</h1>
+        <div class="box-container" id="og">
+
+        </div>
+    
+</section>
+
+<!-- category section starts  -->
+
+<section class="category" id="category">
+
+    <h1 class="heading">kupujte po <span>kategorijama</span></h1>
+
+    <div class="box-container">
+
+        <div class="categories"  onclick="prikaziPovrce()">
+            <img src="../images/category-1.png" alt="" class="item-image">
+            <div class="image-title">Povrće</div>
+        </div>
+        <div class="categories" onclick="prikaziSok()">
+            <img src="../images/category-2.png" alt="" class="item-image">
+            <div class="image-title">Mliječni proizvodi</div>
+        </div>
+        <div class="categories" onclick="prikaziMeso()">
+            <img src="../images/category-3.png" alt="" class="item-image">
+            <div class="image-title">Meso</div>
+        </div>
+        <div class="categories" onclick="prikaziVoce()">
+            <img src="../images/category-4.png" alt="" class="item-image">
+            <div class="image-title">Voće</div>
+        </div>
+
+      <!--  <div class="box">
+            <h3>Povrće</h3>
+            <p>Do 50% popusta</p>
+            <img src="../images/category-1.png" alt="">
+            <button onclick="prikaziPovrce()" class="btn">Kupi sada</button>
+        </div>
+        <div class="box">
+            <h3>Sok</h3>
+            <p>Do 44% popusta</p>
+            <img src="../images/category-2.png" alt="">
+            <button onclick="prikaziSok()" class="btn">Kupi sada</button>
+        </div>
+        <div class="box">
+            <h3>Meso</h3>
+            <p>Do 35% popusta</p>
+            <img src="../images/category-3.png" alt="">
+            <button onclick="prikaziMeso()" class="btn">Kupi sada</button>
+        </div>
+        <div class="box">
+            <h3>Voće</h3>
+            <p>Do 12% popusta</p>
+            <img src="../images/category-4.png" alt="">
+            <button onclick="prikaziVoce()" class="btn">Kupi sada</button>
+        </div>
+-->
+    </div>
+
+</section>
+
+<!-- category section ends -->
+
+<section id="vegatables" class="product">
+
+    <h1 class="heading"><span>povrće</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">-33%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-1.png" alt="">
+            <h3>Banana</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Banana" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-45%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-2.png" alt="">
+            <h3>Paradajz</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Paradajz" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+        </div>
+    </div>
+    
+</section>
+
+<section id="juice" class="product">
+
+    <h1 class="heading"><span>mliječni proizvodi</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">-33%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-1.png" alt="">
+            <h3>Banana</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Banana" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-45%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-2.png" alt="">
+            <h3>Paradajz</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Paradajz" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+        </div>
+    </div>
+    
+</section>
+
+<section id="meat" class="product">
+
+    <h1 class="heading"><span>meso</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">-33%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-1.png" alt="">
+            <h3>Banana</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Banana" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-45%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-2.png" alt="">
+            <h3>Paradajz</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Paradajz" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+        </div>
+    </div>
+    
+</section>
+<section id="fruits" class="product">
+
+    <h1 class="heading"><span>voće</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">-33%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-1.png" alt="">
+            <h3>Banana</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Banana" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-45%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-2.png" alt="">
+            <h3>Paradajz</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Paradajz" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button buynow-btn" data-name="Narandža" data-price="2">Dodaj u korpu</button>
+        </div>
+    </div>
+    
+</section>
+
+<!-- product section starts  -->
+
+<section class="product" id="product">
+
+    <h1 class="heading">najnoviji <span>proizvodi</span></h1>
+
+    <div class="box-container pr">
+
+    <!--    <div class="box">
+            <span class="discount">-33%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-1.png" alt="">
+            <h3>Banana</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Banana" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-45%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-2.png" alt="">
+            <h3>Paradajz</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Paradajz" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-52%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-3.png" alt="">
+            <h3>Narandža</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn button" data-name="Narandza" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-13%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-4.png" alt="">
+            <h3>Mlijeko</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Mlijeko" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-20%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-5.png" alt="">
+            <h3>Šljiva</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Šljiva" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-29%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-6.png" alt="">
+            <h3>Bademi</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Bademi" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-55%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-7.png" alt="">
+            <h3>Jabuka</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Jabuka" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-30%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-8.png" alt="">
+            <h3>Maslac</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Maslac" data-price="2">Dodaj u korpu</button>
+        </div>
+
+        <div class="box">
+            <span class="discount">-40%</span>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <img src="../images/product-9.png" alt="">
+            <h3>Mrkva</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price"> $10.50 <span> $13.20 </span> </div>
+            <div class="quantity">
+                <span>Količina : </span>
+                <input type="number" min="1" max="1000" value="1">
+                <span> /kg </span>
+            </div>
+            <button class="btn buynow-btn" data-name="Mrkva" data-price="2">Dodaj u korpu</button>
+        </div>-->
+
+    </div>
+
+</section>
+<!--
+<section id="page">
+    <button class="btn" onclick="prikaziPrvu()">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn">4</button>
+</section>-->
+
+<!-- product section ends -->
+
+<!-- deal section starts  -->
+
+<section class="deal" id="deal">
+
+    <div class="content">
+
+        <h3 class="title">Ponuda dana</h3>
+        <p>Ne propustite veliku godišnju akciju svih artikala po jako sniženim cijenama.</p>
+
+        <div class="count-down">
+            <div class="box">
+                <h3 id="day">00</h3>
+                <span>Dan</span>
+            </div>
+            <div class="box">
+                <h3 id="hour">00</h3>
+                <span>Sat</span>
+            </div>
+            <div class="box">
+                <h3 id="minute">00</h3>
+                <span>Minuta</span>
+            </div>
+            <div class="box">
+                <h3 id="second">00</h3>
+                <span>Sekunda</span>
+            </div>
+        </div>
+
+        <button class="btn">Provjeri</button>
+
+    </div>
+
+</section>
+
+<!-- deal section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>kontakt</span></h1>
+
+    <form action="">
+
+        <div class="inputBox">
+            <input type="text" placeholder="ime">
+            <input type="email" placeholder="email">
+        </div>
+
+        <div class="inputBox">
+            <input type="number" placeholder="broj telefona">
+            <input type="text" placeholder="subjekt">
+        </div>
+
+        <textarea placeholder="poruka" name="" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="Pošalji poruku" class="btn">
+
+    </form>
+
+</section>
+
+<!-- contact section ends --> 
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <img class="logo" src="../images/logo.png" alt="">            
+            <div class="share">
+                <a href="https://www.facebook.com/" class="btn fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/?hl=en" class="btn fab fa-instagram"></a>
+                <a href="https://www.google.com" class="btn fab fa-google"></a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <h3>Lokacija</h3>
+            <div class="links">
+                <a href="#">Adresa 1</a>
+                <a href="#">Adresa 2</a>
+                <a href="#">Adresa 3</a>
+                <a href="#">Adresa 4</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Brzi linkovi</h3>
+            <div class="links">
+                <a href="#home">Početna</a>
+                <a href="#category">Kategorija</a>
+                <a href="#product">Proizvodi</a>
+                <a href="#deal">Dogovor</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Preuzmi aplikaciju</h3>
+            <div class="links">
+                <a href="#">Google play</a>
+                <a href="#">Window xp</a>
+                <a href="#">App store</a>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> Projektni <span> tim 4 </span> | sva prava zadržana! </h1>
+
+</section>
+
+<!-- footer section ends -->
+
+
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Korpa</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>UKUPAN IZNOS: <span class="total-cart"></span> KM</div>
+        </div>
+        <div class="modal-footer">
+            <div>
+              <button type="button" class="isprazni clear-cart btn btn-danger" data-dismiss="modal">Isprazni</button>
+            </div>
+            <button type="button" class="zatvori btn btn-secondary" data-dismiss="modal">Zatvori</button>
+            <button type="button" class="naruci btn btn-primary">Naruči</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="../js/glavna.js"></script>
+<script src="../js/korpa.js"></script>
+<script src="../js/ponude.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/api.js"></script>
+    
+</body>
+</html>
